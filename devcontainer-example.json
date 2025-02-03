@@ -13,7 +13,8 @@
             "extensions": [
                 "ms-vscode.cpptools",
                 "ms-vscode.makefile-tools",
-                "ms-ceintl.vscode-language-pack-zh-hans"
+                "ms-ceintl.vscode-language-pack-zh-hans",
+                "mhutchie.git-graph"
             ]
         }
     }
