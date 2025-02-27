@@ -12,6 +12,8 @@ jobs:
   triggers:
   - !BranchUpdateTrigger
     branches: master
+  - !TagCreateTrigger
+    branches: master
   retryCondition: never
   maxRetries: 3
   retryDelay: 30
