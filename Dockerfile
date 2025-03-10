@@ -21,13 +21,11 @@
 #     ./configure --enable-ftdi --prefix=/openocd && \
 #     make && make install
 
-FROM mcr.microsoft.com/devcontainers/base:ubuntu-24.04
+FROM ubuntu:24.04
 
 RUN apt update && \
-    apt install -y git \
-                   make cmake \
-                   gcc gcc-arm-none-eabi \
-                   gdbserver gdb-multiarch \
-                   bison libncurses5-dev libncursesw5-dev \
-                   openocd && \
+    apt install -y curl git make cmake clang-format gcc gdbserver gdb-multiarch bison libncurses5-dev gdbserver gdb-multiarch && \
     apt clean
+RUN apt install -y gcc-arm-none-eabi && apt clean
+
+

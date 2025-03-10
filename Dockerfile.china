@@ -1,0 +1,10 @@
+FROM ubuntu:24.04
+
+RUN cp /etc/apt/sources.list.d/ubuntu.sources /etc/apt/sources.list.d/ubuntu.sources.official && \
+    sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list.d/ubuntu.sources
+
+RUN apt update && \
+    apt install -y curl git make cmake clang-format gcc gcc-arm-none-eabi gdbserver gdb-multiarch bison libncurses5-dev gdbserver gdb-multiarch && \
+    apt clean
+
+CMD [ "/bin/bash" ]
