@@ -24,8 +24,8 @@
 FROM ubuntu:24.04
 
 RUN apt update && \
-    apt install -y curl git make cmake clang-format gcc gdbserver gdb-multiarch bison libncurses5-dev gdbserver gdb-multiarch && \
+    apt install -y curl git make cmake clang-format gcc g++ gcc-arm-none-eabi gdbserver gdb-multiarch bison libncurses5-dev && \
     apt clean
 RUN apt install -y gcc-arm-none-eabi && apt clean
 
-
+CMD [ "/bin/bash" ]

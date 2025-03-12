@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build in China",
+            "type": "shell",
+            "command": "docker build -f Dockerfile.china -t dev-container-arm:latest .",
+            "detail": "Build the docker image with the tag 'latest'.",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build"
+            }
+        }
+    ]
+}
